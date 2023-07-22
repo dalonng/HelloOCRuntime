@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0381962A2A6C326B00FD4B78 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 038196292A6C326B00FD4B78 /* README.md */; };
+		0381962E2A6C3A2400FD4B78 /* OakProperty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0381962C2A6C34D900FD4B78 /* OakProperty.swift */; };
 		0386FB8F2A6C0F3100A2C9C8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0386FB8E2A6C0F3100A2C9C8 /* AppDelegate.m */; };
 		0386FB922A6C0F3100A2C9C8 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0386FB912A6C0F3100A2C9C8 /* SceneDelegate.m */; };
 		0386FB952A6C0F3100A2C9C8 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0386FB942A6C0F3100A2C9C8 /* ViewController.m */; };
@@ -20,7 +21,7 @@
 		0386FBB62A6C0F3400A2C9C8 /* HelloOCRuntimeUITestsLaunchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0386FBB52A6C0F3400A2C9C8 /* HelloOCRuntimeUITestsLaunchTests.m */; };
 		0386FBC52A6C120800A2C9C8 /* Oak.m in Sources */ = {isa = PBXBuildFile; fileRef = 0386FBC42A6C120800A2C9C8 /* Oak.m */; };
 		0386FBC82A6C128000A2C9C8 /* Barrel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0386FBC72A6C128000A2C9C8 /* Barrel.m */; };
-		0386FBCC2A6C12F400A2C9C8 /* OakProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = 0386FBCB2A6C12F400A2C9C8 /* OakProperty.m */; };
+		0386FBCC2A6C12F400A2C9C8 /* OakOProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = 0386FBCB2A6C12F400A2C9C8 /* OakOProperty.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +43,8 @@
 
 /* Begin PBXFileReference section */
 		038196292A6C326B00FD4B78 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		0381962B2A6C34D900FD4B78 /* HelloOCRuntime-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "HelloOCRuntime-Bridging-Header.h"; sourceTree = "<group>"; };
+		0381962C2A6C34D900FD4B78 /* OakProperty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OakProperty.swift; sourceTree = "<group>"; };
 		0386FB8A2A6C0F3100A2C9C8 /* HelloOCRuntime.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HelloOCRuntime.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0386FB8D2A6C0F3100A2C9C8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		0386FB8E2A6C0F3100A2C9C8 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -63,8 +66,8 @@
 		0386FBC42A6C120800A2C9C8 /* Oak.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Oak.m; sourceTree = "<group>"; };
 		0386FBC62A6C128000A2C9C8 /* Barrel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Barrel.h; sourceTree = "<group>"; };
 		0386FBC72A6C128000A2C9C8 /* Barrel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Barrel.m; sourceTree = "<group>"; };
-		0386FBCA2A6C12F400A2C9C8 /* OakProperty.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OakProperty.h; sourceTree = "<group>"; };
-		0386FBCB2A6C12F400A2C9C8 /* OakProperty.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OakProperty.m; sourceTree = "<group>"; };
+		0386FBCA2A6C12F400A2C9C8 /* OakOProperty.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OakOProperty.h; sourceTree = "<group>"; };
+		0386FBCB2A6C12F400A2C9C8 /* OakOProperty.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OakOProperty.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -164,8 +167,10 @@
 		0386FBC92A6C12C500A2C9C8 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				0386FBCA2A6C12F400A2C9C8 /* OakProperty.h */,
-				0386FBCB2A6C12F400A2C9C8 /* OakProperty.m */,
+				0386FBCA2A6C12F400A2C9C8 /* OakOProperty.h */,
+				0386FBCB2A6C12F400A2C9C8 /* OakOProperty.m */,
+				0381962C2A6C34D900FD4B78 /* OakProperty.swift */,
+				0381962B2A6C34D900FD4B78 /* HelloOCRuntime-Bridging-Header.h */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -237,6 +242,7 @@
 				TargetAttributes = {
 					0386FB892A6C0F3100A2C9C8 = {
 						CreatedOnToolsVersion = 15.0;
+						LastSwiftMigration = 1500;
 					};
 					0386FBA42A6C0F3400A2C9C8 = {
 						CreatedOnToolsVersion = 15.0;
@@ -304,7 +310,8 @@
 				0386FB952A6C0F3100A2C9C8 /* ViewController.m in Sources */,
 				0386FBC82A6C128000A2C9C8 /* Barrel.m in Sources */,
 				0386FB8F2A6C0F3100A2C9C8 /* AppDelegate.m in Sources */,
-				0386FBCC2A6C12F400A2C9C8 /* OakProperty.m in Sources */,
+				0386FBCC2A6C12F400A2C9C8 /* OakOProperty.m in Sources */,
+				0381962E2A6C3A2400FD4B78 /* OakProperty.swift in Sources */,
 				0386FBC52A6C120800A2C9C8 /* Oak.m in Sources */,
 				0386FBA02A6C0F3400A2C9C8 /* main.m in Sources */,
 				0386FB922A6C0F3100A2C9C8 /* SceneDelegate.m in Sources */,
@@ -484,6 +491,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = ZX794FKY96;
@@ -502,6 +510,9 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.mototo.HelloOCRuntime;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "HelloOCRuntime/Utils/HelloOCRuntime-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -511,6 +522,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = ZX794FKY96;
@@ -529,6 +541,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.mototo.HelloOCRuntime;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "HelloOCRuntime/Utils/HelloOCRuntime-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -536,6 +550,7 @@
 		0386FBBD2A6C0F3400A2C9C8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -554,6 +569,7 @@
 		0386FBBE2A6C0F3400A2C9C8 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -572,6 +588,7 @@
 		0386FBC02A6C0F3400A2C9C8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = ZX794FKY96;
@@ -588,6 +605,7 @@
 		0386FBC12A6C0F3400A2C9C8 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = ZX794FKY96;

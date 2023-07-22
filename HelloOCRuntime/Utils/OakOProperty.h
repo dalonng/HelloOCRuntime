@@ -9,7 +9,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface OakProperty : NSObject
+@interface OakOProperty : NSObject
 
 @property (nonatomic, strong) NSString* name;
 @property (nonatomic, strong) NSString* attributes;
@@ -18,7 +18,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 // MARK: - oak_propertics
 
-extern NSArray<OakProperty *> * oak_propertics(Class klass);
+extern NSArray<OakOProperty *> * oak_propertics(Class klass);
 
 
 NS_ASSUME_NONNULL_END

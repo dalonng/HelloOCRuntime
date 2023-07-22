@@ -5,12 +5,12 @@
 //  Created by d on 2023/07/22.
 //
 
-#import "OakProperty.h"
+#import "OakOProperty.h"
 
 @import Foundation;
 @import ObjectiveC;
 
-@implementation OakProperty
+@implementation OakOProperty
 
 - (instancetype)initWithName:(NSString *)name attributes:(NSString *)attributes {
   self = [super init];
@@ -28,8 +28,8 @@
 @end
 
 
-NSArray<OakProperty *> * oak_propertics(Class klass) {
-  NSMutableArray<OakProperty *>* oak_properties = [NSMutableArray array];
+NSArray<OakOProperty *> * oak_propertics(Class klass) {
+  NSMutableArray<OakOProperty *>* oak_properties = [NSMutableArray array];
   unsigned int count_of_properties = 0;
   objc_property_t* properties = class_copyPropertyList(klass, &count_of_properties);
   for (NSUInteger i = 0; i < count_of_properties; i++) {
@@ -38,7 +38,7 @@ NSArray<OakProperty *> * oak_propertics(Class klass) {
     const char* property_attributes = property_getAttributes(property);
     NSString* name = [[NSString alloc] initWithUTF8String:property_name];
     NSString* attributes = [[NSString alloc] initWithUTF8String:property_attributes];
-    [oak_properties addObject:[[OakProperty alloc] initWithName:name attributes:attributes]];
+    [oak_properties addObject:[[OakOProperty alloc] initWithName:name attributes:attributes]];
   }
   free(properties);
   return [oak_properties copy];

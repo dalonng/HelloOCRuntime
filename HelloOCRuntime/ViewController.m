@@ -6,9 +6,10 @@
 //
 
 #import "ViewController.h"
-#import "OakProperty.h"
+#import "OakOProperty.h"
 #import "Oak.h"
 #import "Barrel.h"
+#import "HelloOCRuntime-Swift.h"
 
 @interface ViewController ()
 
@@ -18,8 +19,8 @@
 
 - (void)viewDidLoad {
   [super viewDidLoad];
-  NSArray<OakProperty *>* properties = oak_propertics([Oak class]);
-  NSLog(@"Oak properties: %@", properties);
+  NSLog(@"Oak properties: %@", oak_propertics([Oak class]));
+  [OakSwift main];
 }
 
 
