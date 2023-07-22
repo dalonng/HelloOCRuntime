@@ -9,9 +9,13 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+@interface OakBase : NSObject
+@property (nonatomic, copy) NSString* baseName;
+@end
+
 @class Barrel;
 
-@interface Oak : NSObject
+@interface Oak : OakBase
 
 @property (nonatomic, assign) NSInteger count;
 @property (nonatomic, strong) NSNumber* size;

@@ -10,9 +10,15 @@
 
 static const void * kOak;
 
+@implementation OakBase
+
+@end
+
 @implementation Oak
 
 @end
+
+
 
 @implementation Oak(Ext)
 
