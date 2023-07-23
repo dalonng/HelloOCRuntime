@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0302CF722A6CCA4F004EF2E4 /* NSObject+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0302CF712A6CCA4F004EF2E4 /* NSObject+Ext.swift */; };
+		0302CF742A6CCD21004EF2E4 /* OakIVar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0302CF732A6CCD21004EF2E4 /* OakIVar.swift */; };
+		0302CF762A6CCF07004EF2E4 /* OakSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0302CF752A6CCF07004EF2E4 /* OakSwift.swift */; };
+		031BDC9C2A6CAF1D00C1B564 /* Oak+Codable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031BDC9B2A6CAF1D00C1B564 /* Oak+Codable.swift */; };
 		0381962A2A6C326B00FD4B78 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 038196292A6C326B00FD4B78 /* README.md */; };
 		0381962E2A6C3A2400FD4B78 /* OakProperty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0381962C2A6C34D900FD4B78 /* OakProperty.swift */; };
 		0386FB8F2A6C0F3100A2C9C8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0386FB8E2A6C0F3100A2C9C8 /* AppDelegate.m */; };
@@ -42,6 +46,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0302CF712A6CCA4F004EF2E4 /* NSObject+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSObject+Ext.swift"; sourceTree = "<group>"; };
+		0302CF732A6CCD21004EF2E4 /* OakIVar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OakIVar.swift; sourceTree = "<group>"; };
+		0302CF752A6CCF07004EF2E4 /* OakSwift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OakSwift.swift; sourceTree = "<group>"; };
+		031BDC9B2A6CAF1D00C1B564 /* Oak+Codable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Oak+Codable.swift"; sourceTree = "<group>"; };
 		038196292A6C326B00FD4B78 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		0381962B2A6C34D900FD4B78 /* HelloOCRuntime-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "HelloOCRuntime-Bridging-Header.h"; sourceTree = "<group>"; };
 		0381962C2A6C34D900FD4B78 /* OakProperty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OakProperty.swift; sourceTree = "<group>"; };
@@ -95,6 +103,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		031BDC9A2A6CAEFB00C1B564 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				031BDC9B2A6CAF1D00C1B564 /* Oak+Codable.swift */,
+				0302CF752A6CCF07004EF2E4 /* OakSwift.swift */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
 		0386FB812A6C0F3100A2C9C8 = {
 			isa = PBXGroup;
 			children = (
@@ -119,6 +136,7 @@
 		0386FB8C2A6C0F3100A2C9C8 /* HelloOCRuntime */ = {
 			isa = PBXGroup;
 			children = (
+				031BDC9A2A6CAEFB00C1B564 /* Features */,
 				0386FBC92A6C12C500A2C9C8 /* Utils */,
 				0386FBC22A6C11F700A2C9C8 /* Models */,
 				0386FB8D2A6C0F3100A2C9C8 /* AppDelegate.h */,
@@ -171,6 +189,8 @@
 				0386FBCB2A6C12F400A2C9C8 /* OakOProperty.m */,
 				0381962C2A6C34D900FD4B78 /* OakProperty.swift */,
 				0381962B2A6C34D900FD4B78 /* HelloOCRuntime-Bridging-Header.h */,
+				0302CF712A6CCA4F004EF2E4 /* NSObject+Ext.swift */,
+				0302CF732A6CCD21004EF2E4 /* OakIVar.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -308,13 +328,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				0386FB952A6C0F3100A2C9C8 /* ViewController.m in Sources */,
+				0302CF762A6CCF07004EF2E4 /* OakSwift.swift in Sources */,
+				0302CF722A6CCA4F004EF2E4 /* NSObject+Ext.swift in Sources */,
 				0386FBC82A6C128000A2C9C8 /* Barrel.m in Sources */,
 				0386FB8F2A6C0F3100A2C9C8 /* AppDelegate.m in Sources */,
 				0386FBCC2A6C12F400A2C9C8 /* OakOProperty.m in Sources */,
+				031BDC9C2A6CAF1D00C1B564 /* Oak+Codable.swift in Sources */,
 				0381962E2A6C3A2400FD4B78 /* OakProperty.swift in Sources */,
 				0386FBC52A6C120800A2C9C8 /* Oak.m in Sources */,
 				0386FBA02A6C0F3400A2C9C8 /* main.m in Sources */,
 				0386FB922A6C0F3100A2C9C8 /* SceneDelegate.m in Sources */,
+				0302CF742A6CCD21004EF2E4 /* OakIVar.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

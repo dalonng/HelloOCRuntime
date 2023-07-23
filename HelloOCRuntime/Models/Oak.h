@@ -18,6 +18,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface Oak : OakBase
 
 @property (nonatomic, assign) NSInteger count;
+@property (nonatomic, assign) CGFloat value;
 @property (nonatomic, strong) NSNumber* size;
 @property (nonatomic, copy) NSString* name;
 

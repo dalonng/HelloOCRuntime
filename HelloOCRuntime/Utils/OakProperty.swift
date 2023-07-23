@@ -8,16 +8,6 @@
 import Foundation
 import ObjectiveC
 
-@objc public final class OakSwift: NSObject {
-  @objc public static func main() {
-    if let oak_properties = oak_propertics(Oak.self) {
-      oak_properties.forEach { p in
-        print("\(p)")
-      }
-    }
-  }
-}
-
 @frozen
 public struct OakProperty {
   let name: String
@@ -34,7 +24,7 @@ func oak_propertics(_ klass: AnyClass?) -> [OakProperty]? {
   var count_of_properties: UInt32 = 0
   var oak_properties = [OakProperty]()
   let properties = class_copyPropertyList(klass, &count_of_properties)
-  defer { free(properties) }
+  defer { properties?.deallocate() }
   
   for i in 0..<Int(count_of_properties) {
     guard let property = properties?[i] else {
