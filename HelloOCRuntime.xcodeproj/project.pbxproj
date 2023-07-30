@@ -143,7 +143,9 @@
 				0386FBB22A6C0F3400A2C9C8 /* HelloOCRuntimeUITests */,
 				0386FB8B2A6C0F3100A2C9C8 /* Products */,
 			);
+			indentWidth = 2;
 			sourceTree = "<group>";
+			tabWidth = 2;
 		};
 		0386FB8B2A6C0F3100A2C9C8 /* Products */ = {
 			isa = PBXGroup;

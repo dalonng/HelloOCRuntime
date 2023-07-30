@@ -12,13 +12,25 @@ import ObjectiveC
 public struct OakProperty {
   let name: String
   let attributes: String
+  let typeEncoding: String
+  let isReferenceType: Bool
+  let ivarName: String
 }
 
 extension OakProperty: CustomStringConvertible {
   public var description: String {
-    "<name: \(name), attributes: \(attributes)>"
+"""
+{
+           name: \(name)
+   typeEncoding: \(typeEncoding)
+isReferenceType: \(isReferenceType)
+       ivarName: \(ivarName)
+}
+"""
   }
 }
+
+// MARK: - oak_propertics
 
 func oak_propertics(_ klass: AnyClass?) -> [OakProperty]? {
   var count_of_properties: UInt32 = 0
@@ -35,7 +47,33 @@ func oak_propertics(_ klass: AnyClass?) -> [OakProperty]? {
     if let s = property_getAttributes(property) {
       attributes = String(cString: s)
     }
-    oak_properties.append(OakProperty(name: String(cString: property_getName(property)), attributes: attributes))
+    
+    var count: UInt32 = 0
+    let attributeList = property_copyAttributeList(property, &count)
+    var typeEncoding = ""
+    var isReferenceType = false
+    var ivarName = ""
+    for i in 0..<Int(count) {
+      guard let attribute = attributeList?[i] else {
+        continue
+      }
+      let name = String(cString: attribute.name)
+      if name == "T" {
+        let value = String(cString: attribute.value).trimmingCharacters(in: CharacterSet(charactersIn: "@\""))
+        typeEncoding = value
+      } else if name == "&" {
+        isReferenceType = true
+      } else if name == "V" {
+        ivarName = String(cString: attribute.value)
+      }
+
+    }
+    
+    oak_properties.append(OakProperty(name: String(cString: property_getName(property)),
+                                      attributes: attributes,
+                                      typeEncoding: typeEncoding,
+                                      isReferenceType: isReferenceType,
+                                      ivarName: ivarName))
   }
   return oak_properties
 }
